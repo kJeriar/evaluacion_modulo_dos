@@ -38,25 +38,59 @@
     <hr>
 
     <h3>Formulario de Contacto</h3>
+
     <form id="contactoForm">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="nombre" required>
       </div>
+    
       <div class="mb-3">
         <label for="correo" class="form-label">Correo Electrónico</label>
         <input type="email" class="form-control" id="correo" required>
       </div>
+    
       <div class="mb-3">
         <label for="mensaje" class="form-label">Mensaje</label>
         <textarea class="form-control" id="mensaje" rows="4" required></textarea>
       </div>
+    
+      <div class="mb-3">
+        <label class="form-label">¿Deseas agendar una charla de ciberseguridad?</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="agendar" id="agendarSi" value="si">
+          <label class="form-check-label" for="agendarSi">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="agendar" id="agendarNo" value="no" checked>
+          <label class="form-check-label" for="agendarNo">No</label>
+        </div>
+      </div>
+    
+      <div id="datosCita" style="display: none;">
+        <div class="mb-3">
+          <label for="fecha" class="form-label">Fecha de la cita</label>
+          <input type="date" class="form-control" id="fecha">
+        </div>
+        <div class="mb-3">
+          <label for="hora" class="form-label">Hora de la cita</label>
+          <select class="form-control" id="hora">
+            <option value="">Selecciona una hora</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:30">11:30 AM</option>
+            <option value="15:00">15:00 PM</option>
+            <option value="16:30">16:30 PM</option>
+          </select>
+        </div>
+      </div>
+    
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
+    
 
-    <hr>
 
-    <h3>Test de Seguridad</h3>
+
+    <h3 class="mt-5">Test de Seguridad</h3>
     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalTest">Comenzar Test</button>
 
     <!-- Modal -->

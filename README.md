@@ -60,3 +60,18 @@ Configurar .gitignore para excluir archivos innecesarios.
 Publicar el código en GitHub y compartir el enlace.
 
 Documentar el proyecto en README.md, explicando su estructura y funcionalidad.
+
+Estructura del proyecto
+
+evaluacion_modulo_dos/
+├── index.html
+├── amenazas.html
+├── consejos.html
+├── css/
+│   └── estilos.css
+├── js/
+│   └── scripts.js
+├── img/
+│   └── (imágenes del sitio)
+├── .gitignore
+└── README.md
