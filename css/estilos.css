@@ -1,22 +1,141 @@
+/* ===== Reset básico ===== */
 body {
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  h2, h3 {
-    margin-top: 30px;
-  }
-  
-  .card {
-    border-radius: 12px;
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-  }
-  
-  ul {
-    list-style-type: square;
-    padding-left: 20px;
-  }
-  
+  font-family: 'Segoe UI', sans-serif;
+  color: #333333;
+  background-color: #E6F0FA;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ===== Encabezado ===== */
+header,
+.navbar,
+footer {
+  background-color: #0A1F44;
+  color: #ffffff;
+}
+
+header h1,
+header p {
+  color: #ffffff;
+}
+
+/* ===== Títulos ===== */
+h1, h2, h3, h4, h5 {
+  color: #2C5AA0;
+  font-weight: 600;
+}
+
+/* ===== Botones modernos ===== */
+.btn-primary,
+.btn-outline-primary {
+  padding: 12px 24px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(44, 90, 160, 0.15);
+}
+
+.btn-primary {
+  background-color: #2C5AA0;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #1e4178;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  border: 2px solid #2C5AA0;
+  color: #2C5AA0;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: #A3C9F9;
+  color: #0A1F44;
+  transform: translateY(-2px);
+}
+
+/* ===== Tarjetas ===== */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #d0e4f7;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* ===== Slick Slider consejos ===== */
+.slick-consejos div {
+  background-color: #ffffff;
+  border: 1px solid #a3c9f9;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(44, 90, 160, 0.1);
+}
+
+/* ===== Otros ===== */
+code {
+  background-color: #d9ecff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* Navbar active */
+.navbar .nav-link.active {
+  color: #A3C9F9;
+}
+
+/* ===== Estilo para el formulario de contacto ===== */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #d0e4f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(44, 90, 160, 0.1);
+  text-align: left; /* Alinea campos a la izquierda */
+}
+
+/* Etiquetas y campos */
+form .form-label {
+  font-weight: 500;
+  color: #0A1F44;
+}
+
+form .form-control {
+  border-radius: 8px;
+  border: 1px solid #a3c9f9;
+  padding: 10px 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form .form-control:focus {
+  border-color: #2C5AA0;
+  box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.15);
+}
+
+/* Botón de envío */
+form button[type="submit"] {
+  margin-top: 15px;
+  width: 100%;
+}
