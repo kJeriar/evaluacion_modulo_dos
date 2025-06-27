@@ -1,9 +1,46 @@
 // Validación de formulario de contacto
-document.getElementById('contactoForm')?.addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert("Gracias por tu mensaje. Nos pondremos en contacto pronto.");
-    this.reset();
-  });
+if (document.getElementById('contactoForm')) {
+    document.getElementById('contactoForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+      const mensaje = document.getElementById('mensaje').value;
+      const cita = document.querySelector('input[name="agendar"]:checked').value;
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+  
+      // Alerta rápida
+      alert("Gracias por tu mensaje. Ahora verás el resumen de tu contacto.");
+  
+      // Construcción del resumen
+      let resumenHTML = `
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Correo:</strong> ${correo}</p>
+        <p><strong>Mensaje:</strong> ${mensaje}</p>
+      `;
+  
+      if (cita === 'si') {
+        resumenHTML += `
+          <p><strong>Charla agendada:</strong> Sí</p>
+          <p><strong>Fecha:</strong> ${fecha}</p>
+          <p><strong>Hora:</strong> ${hora}</p>
+        `;
+      } else {
+        resumenHTML += `<p><strong>Charla agendada:</strong> No</p>`;
+      }
+  
+      // Mostrar en el modal
+      $('#modalContenido').html(resumenHTML);
+      const modal = new bootstrap.Modal(document.getElementById('modalResumen'));
+      modal.show();
+  
+      // Reset
+      this.reset();
+      $('#datosCita').hide();
+    });
+  }
+  
   
   // Feedback del test de seguridad
   $(document).ready(function () {
@@ -68,6 +105,8 @@ $('input[name="agendar"]').change(function () {
       $('#fecha, #hora').val('').removeAttr('required');
     }
   });
+
+  
 
 
 
